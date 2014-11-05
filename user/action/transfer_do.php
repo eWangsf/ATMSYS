@@ -9,9 +9,10 @@
 require_once("../../conn/conndb.php");
 session_start();
 $uname = $_SESSION['user'];
-$card = $_POST['aimcard'];
+$card = $_POST['sourcecard'];
+$card2 = $_POST['aimcard'];
 $num = $_POST['num'];
-$ppwd = $_POST['drawpwd'];
+$ppwd = $_POST['transferpwd'];
 
 $str = "select * from user where userName='$uname' and payPassword='$ppwd'";
 $arr = mysql_query($str);
@@ -33,18 +34,31 @@ if(mysql_num_rows($arr)>0)
                 $arr4 = mysql_query($str4);
                 if($arr4)
                     {
-                        echo "<script>alert('success draw!');window.location.href='../view/draw.php';</script>";
+                        echo "<script>alert('transfer out success!');</script>";
                     }
                 else
                     {
-                        echo "<script>alert('save failed!');
-                        window.location.href='../view/draw.php';</script>";
+                        echo "<script>alert('transfer out failed!');
+                        window.location.href='../view/transfer.php';</script>";
+                    }
+
+                $str5 = "update account set balance=balance+'$num' where accountID='$card2'";
+                $arr5 = mysql_query($str5);
+                if($arr5)
+                    {
+                        echo "<script>alert('transfer in success');
+                        window.location.href='../view/transfer.php';</script>";
+                    }
+                else
+                    {
+                        echo "<script>alert('transfer in failed');
+                        window.location.href='../view/transfer.php';</script>";
                     }
             }
         else
             {
                 echo "<script>alert('the card is not yours!');
-                    window.location.href='../view/draw.php';</script>";
+                    window.location.href='../view/transfer.php';</script>";
             }
     }
 else
