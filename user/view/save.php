@@ -1,9 +1,9 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
-    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../jquery-1.11.1.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
     <link href="../css/save.css" rel="stylesheet" type="text/css">
 </head>
 <body>

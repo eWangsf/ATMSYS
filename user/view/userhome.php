@@ -7,9 +7,9 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../jquery-1.11.1.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
 
     <link href="../css/userhome.css" rel="stylesheet" type="text/css">
 
@@ -26,7 +26,7 @@
             <p>E.B</p><p id="little">--my online ATM</p>
         </div>
         <div id="right">
-            <a href="personalcenter.php" target="infowindow">个人资料</a>
+            <a href="../view/personalcenter.php" target="infowindow">个人中心</a>
             <a href="../action/logout.php">退出</a>
         </div>
     </div>

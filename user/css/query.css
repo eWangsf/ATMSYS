@@ -13,7 +13,7 @@
     position: absolute;
     width: 70%;
     height: 40px;
-    background: blanchedalmond;
+    background: lightblue;
     top: 15px;
     left: 25px;
     border-bottom: 2px solid darkgreen;
@@ -58,8 +58,9 @@ form
 form input
 {
     position: absolute;
-    left: 90px;
+    left: 100px;
 }
+
 
 
 

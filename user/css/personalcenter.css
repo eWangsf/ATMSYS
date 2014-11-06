@@ -1,0 +1,44 @@
+#wrapper
+{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#wrapper>#head
+{
+    margin: 0px;
+    padding: 0px;
+    width: 80%;
+    height: 9%;
+    border-bottom: 2px solid darkgreen;
+    position: relative;
+}
+
+#head h4
+{
+    display: block;
+    position: absolute;
+    top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#information div
+{
+    float: left;
+    margin: 10px 0px 10px 0px;
+    padding: 5px;
+    width: 800px;
+    background: #eee;
+    border: 2px solid #bbb;
+}
+
+#information div>p
+{
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
