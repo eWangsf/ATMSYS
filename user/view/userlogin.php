@@ -10,6 +10,7 @@
     <script src="../../bootstrap/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="../css/userlogin.css" />
+    <script type="text/javascript" src="../js/checklogin.js"></script>
 </head>
 
 
@@ -31,7 +32,7 @@
             </div>
             <div class="form-group">
                 <label for="password" class="col-xs-2 control-label">密&nbsp;码：</label>
-                <input type="password" class="col-xs-10 form-control" name="password" id="password" placeholder="请输入密码">
+                <input type="password" class="col-xs-10 form-control" name="password" id="password" placeholder="请输入密码" required>
             </div>
             <div class="form-group">
                 <div class="col-xs-offset-2 col-xs-10">
@@ -44,7 +45,7 @@
             </div>
             <div class="form-group">
                 <div class="col-xs-offset-2 col-xs-10">
-                    <input type="submit" class="btn btn-default" value="&nbsp;&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;&nbsp;">
+                    <input type="button" class="btn btn-default" id="sublogin" value="&nbsp;&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;&nbsp;">
                 </div>
             </div>
         </form>

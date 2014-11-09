@@ -12,31 +12,23 @@ $uname = $_SESSION['user'];
 $card = $_POST['card'];
 $qpwd = $_POST['querypwd'];
 
-$str = "select * from user where userName='$uname' and payPassword='$qpwd'";
+/*找到用户名对应的用户ID*/
+$str = "select userID from user where userName ='$uname'";
 $arr = mysql_query($str);
 $result = mysql_fetch_array($arr);
-if(mysql_num_rows($arr) > 0)
-    {
-        $str2 = "select userID from user where userName ='$uname'";
-        $arr2 = mysql_query($str2);
-        $result2 = mysql_fetch_array($arr2);
-        $uid = $result2['userID'];
+$uid = $result['userID'];
 
-        $str3 = "select * from account where owner='$uid' and accountID='$card'";
-        $arr3 = mysql_query($str3);
-        $result3 = mysql_fetch_array($arr3);
-        if(mysql_num_rows($arr3) > 0)
-            {
-                $balan = $result3['balance'];
-                echo "<script>alert('$balan');window.location.href='../view/query.php';</script>";
-            }
-        else
-            {
-                echo "<script>alert('you can not query the card');window.location.href='../view/query.php';</script>";
-            }
+/*确认卡号和密码一致且属于该用户，也就是说只有本人才能查询余额*/
+$str2 = "select * from account where accountID='$card' and payPassword='$qpwd' and owner='$uid'";
+$arr2 = mysql_query($str2);
+$result2 = mysql_fetch_array($arr2);
+if(mysql_num_rows($arr2) > 0)
+    {
+        $balan = $result2['balance'];
+        echo "<script>alert('$balan');window.location.href='../view/query.php';</script>";
     }
 else
-    {
-        echo "<script>alert('invalid update!please check your card number and confirm that you enter the correct password!');
-        window.location.href='../view/query.php';</script>";
-    }
+{
+    echo "<script>alert('只有本人才能查询余额，请确认卡号和密码');window.location.href='../view/query.php';</script>";
+}
+?>

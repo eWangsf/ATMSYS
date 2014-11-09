@@ -29,16 +29,50 @@
 {
     float: left;
     margin: 10px 0px 10px 0px;
-    padding: 5px;
+    padding: 8px;
     width: 800px;
     background: #eee;
-    border: 2px solid #bbb;
+    position: relative;
 }
 
-#information div>p
+#information #editname,#information #editmobile,#information #editemail
+{
+    float: left;
+    margin-top: -10px;
+    border-top: 0px;
+}
+
+#information form
+{
+    position: relative;
+}
+
+#information form input[type=submit]
+{
+    position: absolute;
+    left: 50px;
+    top: 35px;
+}
+
+
+#information div p
 {
     display: inline-block;
+    width: 400px;
+    height: inherit;
     margin-left: 10px;
     font-size: 15px;
+    position: absolute;
+    top: 8px;
 }
 
+#information div p a
+{
+    display: inline-block;
+    width: 600px;
+    height: inherit;
+    text-align: right;
+    text-decoration: none;
+
+    top: -5px;
+}

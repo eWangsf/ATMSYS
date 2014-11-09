@@ -5,6 +5,7 @@
  * Date: 14-11-2
  * Time: 上午11:12
  */
+header('Content-type: text/html; charset=utf-8');
 
 require_once("../../conn/conndb.php");
 
@@ -18,7 +19,7 @@ class User
     private $addr;
     private $paypasswod;
 
-    public function User($name1,$password1,$sex1,$email1,$tel1,$addr1,$paypassword1)
+    public function User($name1,$password1,$sex1,$email1,$tel1,$addr1)
     {
         $this->username = $name1;
         $this->password = $password1;
@@ -26,17 +27,16 @@ class User
         $this->email = $email1;
         $this->tel = $tel1;
         $this->addr = $addr1;
-        $this->paypasswod = $paypassword1;
     }
 
     public function SaveUser()
     {
-        $str = "insert into user(userName,userPassword,userSex,userEmail,userTel,userAddr,payPassword)
-        values ('$this->username','$this->password','$this->sex','$this->email','$this->tel','$this->addr','$this->paypassword')";
+        $str = "insert into user(userName,userPassword,userSex,userEmail,userTel,userAddr)
+        values ('$this->username','$this->password','$this->sex','$this->email','$this->tel','$this->addr')";
         $sql = mysql_query($str);
         if($sql)
             {
-                echo "<script>alert('register success!');window.location.href='../view/userlogin.php';</script>";
+                echo "<script>alert('注册成功，请登录！');window.location.href='../view/userlogin.php';</script>";
             }
 
     }
@@ -49,16 +49,15 @@ $gsex = $_POST['sex'];
 $gtel = $_POST['tel'];
 $gemail = $_POST['email'];
 $gaddr = $_POST['addr'];
-$gpaypassword = $_POST['paypassword'];
 
 if($gpwd == $gpwd2)
     {
-        $auser = new User($gname,$gpwd,$gsex,$gemail,$gtel,$gaddr,$gpaypassword);
+        $auser = new User($gname,$gpwd,$gsex,$gemail,$gtel,$gaddr);
         $auser->SaveUser();
     }
 else
     {
-        echo "<script>alert('invalid format!');window.location.href='../view/userregister.php';</script>";
+        echo "<script>alert('密码不一致，请重新输入!');window.location.href='../view/userregister.php';</script>";
     }
 
 ?>

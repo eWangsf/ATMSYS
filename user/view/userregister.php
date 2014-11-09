@@ -10,6 +10,7 @@
     <script src="../../bootstrap/js/bootstrap.min.js"></script>
 
     <link href="../css/userregister.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../js/checkregister.js"></script>
 </head>
 
 <body>
@@ -27,15 +28,11 @@
             </div>
             <div class="form-group">
                 <label for="pwd" class="col-xs-3 control-label">密码：</label>
-                <input type="password" name="userpwd" id="pwd" class="col-xs-9 form-control" placeholder="请输入密码">
+                <input type="password" name="userpwd" id="pwd" class="col-xs-9 form-control" placeholder="请输入密码" >
             </div>
             <div class="form-group">
                 <label for="pwd-again" class="col-xs-3 control-label">确认密码：</label>
-                <input type="password" name="userpwd_again" id="pwd-again" class="col-xs-9 form-control" placeholder="请确认密码：">
-            </div>
-            <div class="form-group">
-                <label for="paypassword" class="col-xs-3 control-label">支付密码：</label>
-                <input type="password" name="paypassword" id="paypassword" class="col-xs-9 form-control" placeholder="请确认支付密码：">
+                <input type="password" name="userpwd_again" id="pwd_again" class="col-xs-9 form-control" placeholder="请确认密码：">
             </div>
             <div class="form-group">
                 <label for="sex" class="col-xs-3 control-label">性别：</label>
@@ -55,7 +52,7 @@
                 <input type="text" name="addr" id="addr" class="col-xs-9 form-control" placeholder="请输入地址">
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary col-xs-offset-3" value="&nbsp;&nbsp;注&nbsp;&nbsp;册&nbsp;&nbsp;">
+                <input type="button" class="btn btn-primary col-xs-offset-3" value="&nbsp;&nbsp;注&nbsp;&nbsp;册&nbsp;&nbsp;">
             </div>
         </form>
 
