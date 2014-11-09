@@ -49,7 +49,7 @@
             </div>
         </div>
         <div id="infowin">
-            <iframe name="infowindow"></iframe>
+            <iframe name="infowindow" src="index.php"></iframe>
         </div>
     </div>
     <div id="footer">

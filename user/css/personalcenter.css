@@ -35,7 +35,7 @@
     position: relative;
 }
 
-#information #editname,#information #editmobile,#information #editemail
+#information #editname,#information #editmobile,#information #editemail,#information #editpwd
 {
     float: left;
     margin-top: -10px;
@@ -52,6 +52,13 @@
     position: absolute;
     left: 50px;
     top: 35px;
+}
+
+#information form#xgmmform input[type=button]
+{
+    position: absolute;
+    left: 50px;
+    top: 80px;
 }
 
 

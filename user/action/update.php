@@ -13,6 +13,9 @@ $newname = $_POST['newname'];
 $newmobile = $_POST['newmobile'];
 $newemail = $_POST['newemail'];
 
+$newpwd = $_POST['newpwd'];
+$newpwd2 = $_POST['newpwd_again'];
+
 if($newname != "")
     {
         $str = "update user set userName='$newname'where userName='$username'";
@@ -46,5 +49,14 @@ if($newemail != "")
             }
     }
 
-
+if($newpwd != "")
+    {
+        $str = "update user set userPassword='$newpwd'where userName='$username'";
+        $result = mysql_query($str);
+        if($result)
+            {
+                echo "<script>alert('修改用户信息成功，请重新登录!');window.parent.location.href='../view/userlogin.php';</script>";
+                session_destroy();
+            }
+    }
 ?>

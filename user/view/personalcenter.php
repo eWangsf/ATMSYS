@@ -39,6 +39,28 @@ session_start();
                 </form>
             </div>
 
+            <div id="pass">
+                <label for="password">密码：</label>
+                <p>
+                    <?
+                    $apwd = $_SESSION['userpassword'];
+                    $num = strlen($apwd);
+                    for($i = 0; $i < $num; $i++)
+                        {
+                            echo "*";
+                        }
+                    ?>
+                </p>
+                <p><a href="#" id="apwd">编辑>></a></p>
+            </div>
+            <div id="editpwd">
+                <form action="../action/update.php" method="post" id="xgmmform">
+                    新&nbsp;&nbsp;密&nbsp;&nbsp;码：<input type="password" name="newpwd" id="newpwd"><br/><br/>
+                    确认密码：<input type="password" name="newpwd_again" id="newpwd_again"><br/><br/>
+                    <input type="button" id="pbtn" value="确定">
+                </form>
+            </div>
+
             <div id="sex">
                 <label for="usex">性别：</label>
                 <p>
